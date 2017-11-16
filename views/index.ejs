@@ -1,0 +1,34 @@
+<%- include('theme/header'); %>
+
+  <div class="container">
+  <h2>Untuk Menambah Data Silahkan Klik</h2>
+  <a href="/tambah" class="btn btn-primary">Tambah</a>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nim</th>
+        <th>Nama</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% data.forEach(function(d){ %>
+        <tr>
+          <td><%= d.NIM %></td>
+          <td><%= d.Nama %></td>
+          <td>
+
+            <a href="/edit/<%= d.NIM %>" class="btn btn-success">Edit</a>
+            <a href="/hapus/<%= d.NIM %>" class="btn btn-danger">Hapus</a>
+
+          </td>
+        </tr>
+        <%  }); %>
+
+
+    </tbody>
+  </table>
+</div>
+
+<%- include('theme/footer') %>

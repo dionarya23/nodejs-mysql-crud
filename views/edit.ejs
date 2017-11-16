@@ -1,0 +1,17 @@
+<%- include('theme/header'); %>
+<form method="post" action="/edit">
+  <div class="form-group">
+    <label for="Nim">Nim</label>
+    <input type="text" value="<%= data[0].NIM %>" name="nim" class="form-control" >
+  </div>
+
+  <input type="hidden" name="nimBefore" value="<%= data[0].NIM %>">
+  <div class="form-group">
+    <label for="Nama">Nama</label>
+    <input type="text" value="<%= data[0].Nama %>" name="nama" class="form-control" >
+  </div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<%- include('theme/footer'); %>
